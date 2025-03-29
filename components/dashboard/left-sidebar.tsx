@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { BarChart, FileText, LayoutDashboard, MessageCircle, Settings } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,7 @@ const LeftSidebar = () => {
 export default LeftSidebar;
 
 function DashboardSidebar({ closeSheet }: { closeSheet?: () => void }) {
+  const pathname = usePathname();
   return (
     <div className="h-full px-4 py-6">
       <div className="flex items-center gap-2 mb-8 px-2">
@@ -41,7 +43,8 @@ function DashboardSidebar({ closeSheet }: { closeSheet?: () => void }) {
         <Link href={"/dashboard"}>
           <Button
             variant="ghost"
-            className="w-full justify-start"
+            // className="w-full justify-start"
+            className={`w-full justify-start ${pathname === "/dashboard" ? "bg-gray-200 dark:bg-gray-800" : ""}`}
             onClick={closeSheet}
           >
             <LayoutDashboard className="mr-2 h-4 w-4" />
@@ -52,7 +55,8 @@ function DashboardSidebar({ closeSheet }: { closeSheet?: () => void }) {
         <Link href={"/dashboard/articles/create"}>
           <Button
             variant="ghost"
-            className="w-full justify-start"
+            // className="w-full justify-start"
+            className={`w-full justify-start ${pathname === "/dashboard/articles/create" ? "bg-gray-200 dark:bg-gray-800" : ""}`}
             onClick={closeSheet}
           >
             <FileText className="mr-2 h-4 w-4" />
@@ -67,14 +71,17 @@ function DashboardSidebar({ closeSheet }: { closeSheet?: () => void }) {
           <MessageCircle className="mr-2 h-4 w-4" />
           Comments
         </Button> */}
-        <Button
-          variant="ghost"
-          className="w-full justify-start"
-          onClick={closeSheet}
-        >
-          <BarChart className="mr-2 h-4 w-4" />
-          Analytics
-        </Button>
+        <Link href={"/dashboard/analytics"}>
+          <Button
+            variant="ghost"
+            // className="w-full justify-start"
+            className={`w-full justify-start ${pathname === "/dashboard/analytics" ? "bg-gray-200 dark:bg-gray-800" : ""}`}
+            onClick={closeSheet}
+          >
+            <BarChart className="mr-2 h-4 w-4" />
+            Analytics
+          </Button>
+        </Link>
         {/* <Button
           variant="ghost"
           className="w-full justify-start"

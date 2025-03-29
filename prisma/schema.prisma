@@ -58,3 +58,10 @@ model Like {
 
   @@unique([userId, articleId]) //a user can like an article one time
 }
+
+model Visitor {
+  id        String   @id @default(cuid())
+  ipAddress String
+  userAgent String?
+  visitedAt DateTime @default(now())
+}
