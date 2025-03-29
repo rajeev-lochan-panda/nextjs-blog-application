@@ -12,7 +12,6 @@ import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 import "react-quill-new/dist/quill.snow.css";
 import dynamic from "next/dynamic";
-import { createArticle } from "@/actions/create-article";
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 import type { Articles } from "@prisma/client";
 import Image from "next/image";

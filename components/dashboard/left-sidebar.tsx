@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
-import { BarChart, FileText, LayoutDashboard, MessageCircle, Settings } from "lucide-react";
+import { BarChart, FileText, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

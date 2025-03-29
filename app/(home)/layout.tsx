@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/home/header/navbar";
 import HeroSection from "@/components/home/hero-section";
 import { prisma } from "@/lib/prisma";
 import { currentUser } from "@clerk/nextjs/server";

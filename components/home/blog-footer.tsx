@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { Mail } from "lucide-react";
 import { Linkedin, Github, Twitter } from "lucide-react";
 import { Input } from "../ui/input";
+import Link from "next/link";
 
 const BlogFooter = () => {
   return (
@@ -40,36 +41,36 @@ const BlogFooter = () => {
             <h3 className="text-lg font-semibold text-foreground">Explore</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   href="/articles"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   All Articles
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Topics
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Authors
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Podcasts
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,36 +80,36 @@ const BlogFooter = () => {
             <h3 className="text-lg font-semibold text-foreground">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Cookie Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Licenses
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
